@@ -1,0 +1,147 @@
+/* Existing styles */
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapper {
+		padding: 20px;
+	}
+
+	.logo {
+		width: 100px; /* Fixed size */
+		height: auto; /* Maintain aspect ratio */
+		margin: 0 auto;
+		display: block;
+		position: absolute; /* Position above everything */
+		top: 20px; /* Adjust top position as needed */
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	h2 {
+		font-size: 1.5em;
+		text-align: center;
+		margin-top: 140px; /* Add margin to avoid overlap with logo */
+	}
+
+	.window {
+		padding: 10px;
+	}
+
+	.window-window {
+		margin-top: -10rem;
+		font-size: 0.9em;
+		white-space: normal; /* Ensures text wraps within container */
+		word-wrap: break-word; /* Breaks long words to fit within container */
+	}
+
+	.h52 {
+		margin-top: 1rem;
+		margin-right: 5.5rem;
+	}
+
+	.centered-h3 {
+		text-align: center;
+		margin-top: 6rem;
+		padding: 1rem 1rem 4rem 1rem;
+	}
+
+	.select-c {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%; /* Ensure full width */
+	}
+
+	.version-container {
+		width: 70%;
+		margin: 10px auto;
+	}
+
+	.modloader-container {
+		width: 70%;
+		margin: 10px auto;
+	}
+
+	.btn-sumbit {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.checkbox-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.checkmark {
+		display: inline-block;
+	}
+}

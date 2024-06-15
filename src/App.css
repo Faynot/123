@@ -1,0 +1,311 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #7d7d7d;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "QuentinPro";
+  src: url("/font/QuentinPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gill";
+  src: url("/public/font/Gill.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrapper {
+  animation: scroll 100s linear infinite;
+  background: url("/public/papyrus-dark.png"), #111111;
+  color: #eee;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3.5rem;
+  position: relative;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: -150% 0px;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11%;
+  height: 7%;
+  padding: 1rem;
+  transition: width, height, 0.3s;
+}
+
+.logo:hover {
+  width: 12%;
+  height: 8%;
+}
+
+.window {
+  height: 19rem;
+  width: 45rem;
+  border-radius: 50px;
+  background-color: #393939;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-window {
+  height: 12rem;
+  width: 41rem;
+  border-radius: 25px;
+  background-color: #292929;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper h2 {
+  font-family: "QuentinPro", sans-serif;
+  font-size: 200%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.window h2 {
+  font-family: "Gill", sans-serif;
+  font-size: 180%;
+  margin-left: 1.5rem;
+}
+
+.window-window h2 {
+  font-family: "Gill", sans-serif;
+  font-size: 170%;
+  text-align: center;
+}
+
+.AI {
+  font-family: "Gill", sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #000aff 33%, #b23dc6 66%, #ff007a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0b2349;
+  transition: font-size 0.3s;
+}
+
+.AI:hover {
+  font-size: 80%;
+}
+
+.centered-h3 {
+  font-family: "QuentinPro", sans-serif;
+  text-align: center;
+  margin: 3rem 0rem -2rem 0rem;
+  font-size: 200%;
+}
+
+.select-c {
+  display: flex;
+}
+
+.btn-sumbit {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: linear-gradient(45deg, #b8b8b8 0%, #757575 50%, #4d4d4d 100%);
+  border-radius: 50px;
+  border: none;
+  font-family: "QuentinPro";
+  font-size: 150%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sumbit:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #c8c8c8 0%, #8f8f8f 50%, #c8c8c8 100%);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 1rem;
+  font-family: "QuentinPro";
+  font-size: 110%;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.checkbox-container input:checked + .checkmark {
+  background: #4066be;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked + .checkmark::after {
+  display: block;
+}
+
+.checkbox-container p {
+  margin-left: 8px;
+}
+
+.checkmark {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkmark:hover {
+  transform: translateY(-4px);
+  background: #8c8c8c;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.li-mod {
+  border-radius: 15px;
+  font-family: "QuentinPro";
+  font-size: 110%;
+  background: #555;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.li-mod:hover {
+  background: #444; /* Можно изменить цвет на более темный оттенок */
+}
+
+.ul-mod {
+  width: 18.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem;
+  outline: none;
+  background: #181818;
+  transition: background 0.3s ease;
+}
+
+.ul-mod:hover {
+  background: #101010;
+}
+
+h3 {
+  font-family: "QuentinPro";
+  font-size: 110%;
+}
+
+.btn-mod {
+  background: #555;
+  transition: background 0.3s ease;
+}
+
+.btn-mod:hover {
+  background: #7f7f7f;
+}
+
+.btn-ai-mod {
+  background: #26b466;
+  transition: background 0.3s ease;
+}
+
+.btn-ai-mod:hover {
+  background: #19e273;
+}
+
+.btn-ai-mod.disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Dim the color */
+}
+
+.btn-ai-mod.disabled:hover {
+  background: #26b466; /* Keep the original color */
+  cursor: not-allowed;
+}
+
+.oh {
+  font-family: "QuentinPro";
+}
+
+.ul-ai-mod {
+  width: 15rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  outline: none;
+  background: #181818;
+  transition: background 0.3s ease;
+}
+
+.ul-ai-mod:hover {
+  background: #101010;
+}
+
+.tooltip {
+  font-family: "Gill";
+  font-size: 150%;
+  color: #ffffff38;
+}
+
+.h1-help-me-pls {
+  font-family: "Gill";
+}
+
+.h1-help-me-pls a {
+  color: #c01885;
+  transition: color 0.3s ease;
+}
+
+.h1-help-me-pls a:hover {
+  color: #ff00a6;
+}
+
+.h2-help {
+  text-align: center;
+}
+
+.div-help {
+  width: 40%;
+  height: 50%;
+}

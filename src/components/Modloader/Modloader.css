@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Quentin';
+	src: url('/public/font/QuentinPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.mod-container {
+	width: 50%;
+	margin-top: 3.5rem;
+	margin-left: 0;
+	align-self: flex-start; /* Align this specific element to the start (left) */
+	margin-left: 0.5rem;
+}
+
+.select::-ms-expand {
+	display: none;
+}
+
+.sl-wr {
+	position: relative;
+}
+
+.sl-wr::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url('/public/Select.png');
+}
+
+@media (max-width: 600px) {
+	.mod-container {
+		width: 70%;
+		margin: 10px auto;
+	}
+}

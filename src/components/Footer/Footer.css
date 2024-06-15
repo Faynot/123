@@ -1,0 +1,104 @@
+/* Existing styles */
+
+.footer {
+	background-color: #0d0d0d;
+	color: white;
+	width: 97%;
+	height: 15%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50.4%);
+	margin-bottom: 1.2rem;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-logo {
+	height: 15%; /* Установка автоматической высоты */
+	width: 15%; /* Установка автоматической ширины */
+	max-height: 15%; /* Максимальная высота */
+	max-width: 15%; /* Максимальная ширина */
+	float: left;
+	margin-left: -10rem;
+}
+
+@-moz-document url-prefix() {
+	.footer-logo {
+		margin-left: -22rem;
+	}
+}
+
+.footer-links {
+	list-style: none;
+	display: flex;
+	flex-direction: column; /* Изменение направления списка */
+	gap: 20px;
+	padding: 0;
+	margin: 0;
+	margin-right: -15rem;
+}
+
+.footer-links li {
+	position: relative; /* Для позиционирования псевдоэлемента */
+}
+
+.footer-links li::before {
+	content: '•'; /* Текст точки */
+	color: white; /* Цвет точки */
+	margin-right: 8px; /* Расстояние между точкой и текстом ссылки */
+}
+
+.footer-links li a {
+	font-family: 'Gill';
+	font-size: 130%;
+	color: white;
+	transition:
+		color 0.3s ease,
+		opacity 0.3s ease;
+}
+
+.footer-links li a:hover {
+	opacity: 0.5;
+	color: white;
+}
+
+@media (max-width: 600px) {
+	.footer {
+		flex-direction: column;
+		height: auto;
+		padding: 10px;
+	}
+
+	.footer-content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-logo {
+		margin: 0 0 10px 0;
+		height: auto;
+		width: 80px;
+	}
+
+	.footer-links {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0;
+	}
+
+	.footer-links li {
+		margin: 5px 10px;
+	}
+}
